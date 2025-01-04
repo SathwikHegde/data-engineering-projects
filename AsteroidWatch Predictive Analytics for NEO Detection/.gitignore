@@ -1,0 +1,48 @@
+
+---
+
+### **.gitignore**
+
+```plaintext
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Data files
+/data/*.csv
+/data/*.json
+
+# Logs and outputs
+*.log
+*.out
+*.err
+
+# Virtual environments
+venv/
+*.egg-info/
+*.egg
+
+# IDE configurations
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Model files
+/models/*.pkl
+/models/*.h5
+
+# Temporary files
+*.tmp
