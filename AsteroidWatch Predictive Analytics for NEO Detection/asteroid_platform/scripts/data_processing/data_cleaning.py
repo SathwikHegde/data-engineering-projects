@@ -7,7 +7,7 @@ API_URL = "https://ssd-api.jpl.nasa.gov/sbdb_query.api"
 PROCESSED_DATA_DIR = '../../data/processed'  # Directory for processed data
 # PROCESSED_DATA_DIR = os.path.join(os.getcwd(), 'asteroid_platform', 'data', 'processed')  # Absolute path
 CLEAN_DATA_FILE = 'asteroid_dataset_clean.csv'
-SAMPLE_DATA_FILE = 'asteroid_dataset_sample.csv' # Added sample file constant
+SAMPLE_DATA_FILE = 'asteroid_dataset_clean_sample.csv' # Added sample file constant
 
 # Ensure the processed data directory exists
 os.makedirs(PROCESSED_DATA_DIR, exist_ok=True)
@@ -146,7 +146,7 @@ try:
     df.insert(0, 'id', ['a{:07d}'.format(i + 1) for i in range(len(df))])
 
     # --- Create Sample Dataset ---
-    sample_df = df.head(100)
+    sample_df = df.head(10)
     output_path = os.path.join(PROCESSED_DATA_DIR, SAMPLE_DATA_FILE)
     df.to_csv(output_path, index=False)
 
@@ -154,7 +154,7 @@ try:
     output_path = os.path.join(PROCESSED_DATA_DIR, CLEAN_DATA_FILE)
     df.to_csv(output_path, index=False)
 
-    # --- Print some summary stats (moved to the end) ---
+    # --- Print some summary stats ---
     print(df.shape)
     print(df.describe())
     print(df.columns)

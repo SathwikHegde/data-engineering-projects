@@ -36,7 +36,7 @@ try:
     print(df.isna().sum())
 
     # --- Create Raw Sample Dataset ---
-    sample_df = df.head(100)
+    sample_df = df.head(10)
     output_path = os.path.join(RAW_DATA_DIR, RAW_SAMPLE_DATA_FILE)
     df.to_csv(output_path, index=False)
 
