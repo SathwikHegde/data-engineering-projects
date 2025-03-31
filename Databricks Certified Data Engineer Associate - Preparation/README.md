@@ -32,7 +32,7 @@ By completing this study guide, you will be able to:
 ## 📖 How to Use This Repository
 1. Clone the repository to your local machine:
    ```sh
-   git clone https://github.com/your-username/databricks-data-engineer-associate.git
+   git clone git@github.com:SathwikHegde/data-engineering-projects.git
    ```
 2. Follow the study materials and example notebooks provided.
 3. Practice with Databricks notebooks and sample datasets.
@@ -58,5 +58,5 @@ This project is licensed under the MIT License.
 ---
 **Author:** [Derar Alhussein | 8x Databricks Certified](https://gale.udemy.com/user/derar-alhussein/)
 Senior Data Engineer, Databricks MVP, and O’Reilly Author  
-**GitHub Repository:** [Databricks Data Engineer Associate](https://github.com/your-username/databricks-data-engineer-associate)
+**GitHub Repository:** [Databricks Data Engineer Associate](git@github.com:SathwikHegde/data-engineering-projects.git)
 
