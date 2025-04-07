@@ -1,0 +1,24 @@
+# Ignore Mac system files
+.DS_Store
+
+# Ignore IDE/project settings
+.vscode/
+.idea/
+
+# Ignore log or dump files
+*.log
+*.bak
+*.sql~  # temp SQL files
+
+# Ignore environment files
+.env
+
+# Node/npm (if used for UI or tools)
+node_modules/
+
+# Python virtual environments (if used)
+venv/
+__pycache__/
+
+# OS generated files
+Thumbs.db

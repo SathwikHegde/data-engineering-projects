@@ -16,6 +16,7 @@ __pycache__/
 # Data files
 /data/*.csv
 /data/*.json
+/asteriod data analysis ref materials
 
 # Logs and outputs
 *.log
