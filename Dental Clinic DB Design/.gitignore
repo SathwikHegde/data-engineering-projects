@@ -12,7 +12,7 @@
 
 # Ignore environment files
 .env
-database/sendemail.php
+Dental Clinic DB Design/database/sendemail.php
 
 # Node/npm (if used for UI or tools)
 node_modules/
