@@ -1,27 +1,32 @@
-<?php 
-    require 'vendor/autoload.php';
+<?php
+require 'vendor/autoload.php';
 
-    class SendEmail{
+class SendEmail {
 
-        public static function SendMail($to,$subject,$content){
-            $key = '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';
+    public static function SendMail($to, $subject, $content) {
+        // Load the API key from an environment variable
+        $key = getenv('SENDGRID_API_KEY');
 
-            $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("pjgawand@gmail.com", "Pratik Gawand");
-            $email->setSubject($subject);
-            $email->addTo($to);
-            $email->addContent("text/plain", $content);
-            //$email->addContent("text/html", $content);
+        if (!$key) {
+            error_log("SendGrid API Key is missing.");
+            return false;
+        }
 
-            $sendgrid = new \SendGrid($key);
+        $email = new \SendGrid\Mail\Mail();
+        $email->setFrom("satwikhegde14@gmail.com", "Sathwik Hegde");
+        $email->setSubject($subject);
+        $email->addTo($to);
+        $email->addContent("text/plain", $content);
 
-            try{
-                $response = $sendgrid->send($email);
-                return $response;
-            }catch(Exception $e){
-                echo 'Email exception Caught : '. $e->getMessage() ."\n";
-                return false;
-            }
+        $sendgrid = new \SendGrid($key);
+
+        try {
+            $response = $sendgrid->send($email);
+            return $response;
+        } catch (Exception $e) {
+            error_log('Email exception caught: ' . $e->getMessage());
+            return false;
         }
     }
+}
 ?>

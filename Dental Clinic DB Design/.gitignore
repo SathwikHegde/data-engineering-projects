@@ -12,6 +12,7 @@
 
 # Ignore environment files
 .env
+database/sendemail.php
 
 # Node/npm (if used for UI or tools)
 node_modules/
@@ -22,3 +23,7 @@ __pycache__/
 
 # OS generated files
 Thumbs.db
+
+
+
+

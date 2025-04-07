@@ -45,6 +45,11 @@ git clone https://github.com/SathwikHegde/data-engineering-projects/dental-offic
 
 2. Load schema and sample data (optional):
 
+> Admin credentials
+
+ - **Username**: `admin`
+ - **Password**: `password`
+
 psql -U youruser -d yourdb -f database/schema.sql
 psql -U youruser -d yourdb -f database/seed_data.sql
 
